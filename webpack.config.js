@@ -1,17 +1,17 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const HtmlInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const FaviconsPlugin = require('favicons-webpack-plugin');
 
 
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'main.js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
     optimization: {
@@ -21,11 +21,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanPlugin(['dist']),
         new MiniCssExtractPlugin(),
-        new FaviconsWebpackPlugin({
+        new FaviconsPlugin({
             logo: './src/icon.png',
-            prefix: 'fav/',
             icons: {
                 android: false,
                 appleIcon: false,
@@ -39,14 +38,14 @@ module.exports = {
                 windows: false
             }
         }),
-        new HtmlWebpackPlugin({
+        new HtmlPlugin({
             template: 'src/index.html',
             inlineSource: /\.css$/,
             minify: {
                 collapseWhitespace: true
             }
         }),
-        new HtmlWebpackInlineSourcePlugin()
+        new HtmlInlineSourcePlugin()
     ],
     module: {
         rules: [
