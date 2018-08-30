@@ -1,3 +1,15 @@
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    html {
+        font-size: 24px;
+    }
+}
+
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
@@ -22,9 +34,9 @@ button {
     background-color: #337ab7;
     border: none;
     color: white;
-    padding: 12px 22px;
-    font-size: 18px;
-    border-radius: 6px;
+    padding: 0.66em 1.2em;
+    font-size: 1.125em;
+    border-radius: 0.4em;
     outline: none !important;
     cursor: pointer;
     transition: background-color 0.4s;
