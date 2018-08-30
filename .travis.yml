@@ -5,6 +5,7 @@ script: npm run build
 deploy:
   provider: pages
   skip_cleanup: true
+  local-dir: dist
   github-token: $PAGES_REPO_TOKEN
   # keep-history: true
   target-branch: master
