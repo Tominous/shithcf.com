@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shithcf/shithcf.github.io.git"
+    "url": "git+https://github.com/prplz/shithcf.com.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "prplz",
+  "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/shithcf/shithcf.github.io/issues"
+    "url": "https://github.com/prplz/shithcf.com/issues"
   },
-  "homepage": "https://github.com/shithcf/shithcf.github.io#readme",
+  "homepage": "https://github.com/prplz/shithcf.com",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
