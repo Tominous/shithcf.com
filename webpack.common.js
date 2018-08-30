@@ -7,7 +7,6 @@ const HtmlPlugin = require('html-webpack-plugin');
 const HtmlInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const FaviconsPlugin = require('favicons-webpack-plugin');
 
-
 module.exports = {
     entry: './src/index.js',
     output: {
