@@ -2,3 +2,12 @@ language: node_js
 node_js:
   - "lts/*"
 script: npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github-token: $PAGES_REPO_TOKEN
+  # keep-history: true
+  target-branch: master
+  repo: shithcf/shithcf.github.io
+  on:
+    branch: master
