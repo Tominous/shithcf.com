@@ -1,7 +1,7 @@
 const path = require('path');
 const CleanPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const HtmlInlineSourcePlugin = require('html-webpack-inline-source-plugin');
@@ -52,9 +52,13 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    {loader: MiniCssExtractPlugin.loader},
+                    MiniCssExtractPlugin.loader,
                     "css-loader"
                 ]
+            },
+            {
+                test: /\.txt$/,
+                use: 'raw-loader'
             }
         ]
     }
