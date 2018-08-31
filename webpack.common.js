@@ -38,7 +38,7 @@ module.exports = {
             }
         }),
         new HtmlPlugin({
-            template: 'src/index.html',
+            template: 'src/index.ejs',
             inlineSource: /\.css$/,
             minify: {
                 collapseWhitespace: true

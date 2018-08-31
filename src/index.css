@@ -45,3 +45,21 @@ button {
 button:hover {
     background-color: #3a8ccf;
 }
+
+.icon {
+    color: #0006;
+    transition: color 0.4s;
+}
+
+.icon:hover {
+    color: #000;
+}
+
+.icon > svg {
+    height: 2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5em;
+    fill: currentColor;
+}

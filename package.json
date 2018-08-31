@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/prplz/shithcf.com",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "favicons-webpack-plugin": "0.0.9",
