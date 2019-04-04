@@ -8,8 +8,6 @@ deploy:
   local-dir: dist
   github-token: $PAGES_REPO_TOKEN
   keep-history: true
-  target-branch: master
-  repo: shithcf/shithcf.github.io
   fqdn: shithcf.com
   on:
     branch: master
