@@ -2,7 +2,7 @@ const path = require('path');
 const CleanPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const HtmlInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const FaviconsPlugin = require('favicons-webpack-plugin');
@@ -15,7 +15,7 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-            new UglifyJsPlugin(),
+            new TerserPlugin(),
             new OptimizeCSSAssetsPlugin()
         ]
     },
